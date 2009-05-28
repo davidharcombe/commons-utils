@@ -53,7 +53,7 @@
       <snapshotRepository>
          <id>snapshots</id>
          <url>dav:http://mvnrepo.wiredandwonderful.com/archiva/repository/snapshots/</url>
-         <uniqueVersion>true</uniqueVersion>
+         <uniqueVersion>false</uniqueVersion>
       </snapshotRepository>
       <repository>
          <id>internal</id>
