@@ -7,6 +7,13 @@
    <version>0.0.1-SNAPSHOT</version>
    <name>commons-utils</name>
    <url>http://maven.apache.org</url>
+
+   <scm>
+      <connection>scm:svn:svn+ssh://david@wiredandwonderful.com/projects/commons-utils/trunk</connection>
+      <developerConnection>scm:svn:svn+ssh://david@wiredandwonderful.com/projects/commons-utils/trunk</developerConnection>
+      <url>svn+ssh://david@wiredandwonderful.com/projects/commons-utils/trunk</url>
+   </scm>
+
    <dependencies>
       <dependency>
          <groupId>commons-collections</groupId>
@@ -24,7 +31,6 @@
             </exclusion>
          </exclusions>
       </dependency>
-
       <dependency>
          <groupId>org.jmock</groupId>
          <artifactId>jmock</artifactId>
