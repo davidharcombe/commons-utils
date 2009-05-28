@@ -7,13 +7,13 @@
    <version>0.0.1-SNAPSHOT</version>
    <name>commons-utils</name>
    <url>http://maven.apache.org</url>
-
+<!--
    <scm>
       <connection>scm:svn:svn+ssh://wiredandwonderful.com/projects/commons-utils/trunk/</connection>
       <developerConnection>scm:svn:svn+ssh://wiredandwonderful.com/projects/commons-utils/trunk/</developerConnection>
       <url>svn+ssh://wiredandwonderful.com/projects/commons-utils/trunk/</url>
    </scm>
-
+-->
    <dependencies>
       <dependency>
          <groupId>commons-collections</groupId>
@@ -115,6 +115,7 @@
                <source>1.5</source>
             </configuration>
          </plugin>
+<!--
          <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-release-plugin</artifactId>
@@ -126,6 +127,7 @@
                <autoVersionSubmodules>true</autoVersionSubmodules>
             </configuration>
          </plugin>
+-->
          <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-source-plugin</artifactId>
