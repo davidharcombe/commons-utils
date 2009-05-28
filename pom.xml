@@ -9,9 +9,9 @@
    <url>http://maven.apache.org</url>
 
    <scm>
-      <connection>scm:svn:svn+ssh://david@wiredandwonderful.com/projects/commons-utils/trunk/</connection>
-      <developerConnection>scm:svn:svn+ssh://david@wiredandwonderful.com/projects/commons-utils/trunk/</developerConnection>
-      <url>svn+ssh://david@wiredandwonderful.com/projects/commons-utils/trunk/</url>
+      <connection>scm:svn:svn+ssh://wiredandwonderful.com/projects/commons-utils/trunk/</connection>
+      <developerConnection>scm:svn:svn+ssh://wiredandwonderful.com/projects/commons-utils/trunk/</developerConnection>
+      <url>svn+ssh://wiredandwonderful.com/projects/commons-utils/trunk/</url>
    </scm>
 
    <dependencies>
