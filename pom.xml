@@ -8,9 +8,9 @@
    <name>commons-utils</name>
    <url>http://maven.apache.org</url>
    <scm>
-      <connection>scm:svn:svn+ssh://david@wiredandwonderful.com/projects/commons-utils/trunk/</connection>
-      <developerConnection>scm:svn:svn+ssh://david@wiredandwonderful.com/projects/commons-utils/trunk/</developerConnection>
-      <url>svn+ssh://david@wiredandwonderful.com/projects/commons-utils/trunk/</url>
+      <connection>scm:svn:svn+ssh://david@wiredandwonderful.com/opt/svn/projects/commons-utils/trunk/</connection>
+      <developerConnection>scm:svn:svn+ssh://david@wiredandwonderful.com/opt/svn/projects/commons-utils/trunk/</developerConnection>
+      <url>svn+ssh://david@wiredandwonderful.com/opt/svn/projects/commons-utils/trunk/</url>
    </scm>
 
    <dependencies>
@@ -119,7 +119,7 @@
             <artifactId>maven-release-plugin</artifactId>
             <version>2.0-beta-9-SNAPSHOT</version>
             <configuration>
-               <tagBase>svn+ssh://david@wiredandwonderful.com/projects/commons-utils/tags/</tagBase>
+               <tagBase>svn+ssh://david@wiredandwonderful.com/opt/svn/projects/commons-utils/tags/</tagBase>
                <remoteTagging>true</remoteTagging>
             </configuration>
          </plugin>
