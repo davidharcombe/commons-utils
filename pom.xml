@@ -95,6 +95,11 @@
             <enabled>true</enabled>
          </snapshots>
       </pluginRepository>
+      <pluginRepository>
+      	<id>intelliwarePublicReleases</id>
+      	<name>Intelliware Public Releases</name>
+      	<url>http://repo.intelliware.ca/release/</url>
+      </pluginRepository>
    </pluginRepositories>
    
    <build>
@@ -133,6 +138,16 @@
                   </goals>
                </execution>
             </executions>
+         </plugin>
+         <plugin>
+         	<groupId>ca.intelliware</groupId>
+         	<artifactId>maven-devcreek-plugin</artifactId>
+         	<executions>
+         		<execution>
+         			<id>devcreek-publish</id>
+                <goals><goal>surefire</goal></goals>
+         		</execution>
+         	</executions>
          </plugin>
       </plugins>
    </build>
