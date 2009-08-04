@@ -3,13 +3,13 @@
    <groupId>com.gramercysoftware</groupId>
    <artifactId>commons-utils</artifactId>
    <packaging>jar</packaging>
-   <version>1.1-SNAPSHOT</version>
+   <version>1.1</version>
    <name>commons-utils</name>
    <url>http://maven.apache.org</url>
    <scm>
-      <connection>scm:svn:svn+ssh://david@wiredandwonderful.com/opt/svn/projects/commons-utils/trunk/</connection>
-      <developerConnection>scm:svn:svn+ssh://david@wiredandwonderful.com/opt/svn/projects/commons-utils/trunk/</developerConnection>
-      <url>svn+ssh://david@wiredandwonderful.com/opt/svn/projects/commons-utils/trunk/</url>
+      <connection>scm:svn:svn+ssh://david@wiredandwonderful.com/opt/svn/projects/commons-utils/tags/commons-utils-1.1</connection>
+      <developerConnection>scm:svn:svn+ssh://david@wiredandwonderful.com/opt/svn/projects/commons-utils/tags/commons-utils-1.1</developerConnection>
+      <url>svn+ssh://david@wiredandwonderful.com/opt/svn/projects/commons-utils/tags/commons-utils-1.1</url>
    </scm>
 
    <dependencies>
