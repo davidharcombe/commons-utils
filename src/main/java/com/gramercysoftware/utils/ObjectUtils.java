@@ -94,7 +94,7 @@ public class ObjectUtils<T> {
 		}
 	}
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("rawtypes")
 	private boolean isFieldEmpty(T objectToCheck, Field field) throws IllegalArgumentException, IllegalAccessException {
 		Object value = field.get(objectToCheck);
 
@@ -132,8 +132,8 @@ public class ObjectUtils<T> {
 		return null == object;
 	}
 
-	@SuppressWarnings("unchecked")
-	private Set<?> createPrimitivesList() {
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	private Set createPrimitivesList() {
 		Set list = Collections.synchronizedSet(new HashSet<Class>());
 		list.add(boolean.class);
 		list.add(byte.class);

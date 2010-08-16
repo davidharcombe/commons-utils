@@ -1,4 +1,4 @@
-package com.gramercysoftware.utils;
+package com.gramercysoftware.utils.text;
 
 import java.util.ArrayList;
 import java.util.List;

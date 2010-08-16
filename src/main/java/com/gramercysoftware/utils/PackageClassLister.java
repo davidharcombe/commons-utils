@@ -69,13 +69,6 @@ public class PackageClassLister {
 		return classes;
 	}
 
-	private static boolean matchesPattern(String className, String pattern) {
-		if(pattern == null) {
-			return true;
-		}
-		return StringUtils.substringBeforeLast(className, ".").matches(pattern);
-	}
-
 	private static List<Class<?>> searchJar(String pkg, String jarName, String pattern) {
 		ArrayList<Class<?>> classes = new ArrayList<Class<?>>();
 
@@ -103,4 +96,10 @@ public class PackageClassLister {
 		return classes;
 	}
 
+	private static boolean matchesPattern(String className, String pattern) {
+		if(pattern == null) {
+			return true;
+		}
+		return StringUtils.substringBeforeLast(className, ".").matches(pattern);
+	}
 }
