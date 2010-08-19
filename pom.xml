@@ -51,12 +51,14 @@
 
    <distributionManagement>
     <repository>
-        <id>wiredandwonderful.com</id>
+    	<uniqueVersion>false</uniqueVersion>
+    	<id>releases</id>
         <name>wiredandwonderful.com-releases</name>
-        <url>http://mvnrepo.wiredandwonderful.com:8081/artifactory/snapshots</url>
+        <url>http://mvnrepo.wiredandwonderful.com:8081/artifactory/releases</url>
     </repository>
     <snapshotRepository>
-        <id>wiredandwonderful.com</id>
+    	<uniqueVersion>false</uniqueVersion>
+    	<id>snapshots</id>
         <name>wiredandwonderful.com-snapshots</name>
         <url>http://mvnrepo.wiredandwonderful.com:8081/artifactory/snapshots</url>
     </snapshotRepository>
