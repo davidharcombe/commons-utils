@@ -50,40 +50,19 @@
    </dependencies>
 
    <distributionManagement>
-      <snapshotRepository>
-         <id>snapshots</id>
-         <url>dav:http://mvnrepo.wiredandwonderful.com/archiva/repository/snapshots/</url>
-         <uniqueVersion>false</uniqueVersion>
-      </snapshotRepository>
-      <repository>
-         <id>internal</id>
-         <url>dav:http://mvnrepo.wiredandwonderful.com/archiva/repository/internal/</url>
-      </repository>
+    <repository>
+        <id>wiredandwonderful.com</id>
+        <name>wiredandwonderful.com-releases</name>
+        <url>http://mvnrepo.wiredandwonderful.com:8081/artifactory/snapshots</url>
+    </repository>
+    <snapshotRepository>
+        <id>wiredandwonderful.com</id>
+        <name>wiredandwonderful.com-snapshots</name>
+        <url>http://mvnrepo.wiredandwonderful.com:8081/artifactory/snapshots</url>
+    </snapshotRepository>
    </distributionManagement>
 
    <repositories>
-      <repository>
-         <id>snapshots</id>
-         <name>Archiva Managed Snapshot Repository</name>
-         <url>http://mvnrepo.wiredandwonderful.com/archiva/repository/snapshots/</url>
-         <releases>
-            <enabled>false</enabled>
-         </releases>
-         <snapshots>
-            <enabled>true</enabled>
-         </snapshots>
-      </repository>
-      <repository>
-         <id>internal</id>
-         <name>Wired and Wonderful Managed Release Repository</name>
-         <url>http://mvnrepo.wiredandwonderful.com/archiva/repository/internal/</url>
-         <releases>
-            <enabled>true</enabled>
-         </releases>
-         <snapshots>
-            <enabled>false</enabled>
-         </snapshots>
-      </repository>
    </repositories>
 
    <pluginRepositories>
