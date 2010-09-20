@@ -67,8 +67,9 @@ public class ObjectUtils<T> {
 				if (!isPrimitive(field)) {
 					isEmpty &= isFieldEmpty(objectToCheck, field);
 				}
-			} catch (SecurityException e) {
-			} catch (NoSuchFieldException e) {
+			} catch (Exception e) {
+				// Ignore
+				System.out.println(e);
 			}
 		}
 		

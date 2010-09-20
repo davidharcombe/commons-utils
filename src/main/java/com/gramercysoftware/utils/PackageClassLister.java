@@ -53,10 +53,14 @@ public class PackageClassLister {
 				// we are only interested in .class files
 				if (files[i].endsWith(".class") && matchesPattern(files[i], pattern)) {
 					// removes the .class extension
+					String className = pkg + '.' + files[i].substring(0, files[i].length() - 6);
 					try {
-						classes.add(Class.forName(pkg + '.' + files[i].substring(0, files[i].length() - 6)));
+						classes.add(Class.forName(className));
 					} catch (ClassNotFoundException e) {
 						// Shouldn't be possible; you're in this package, no?
+						throw new RuntimeException(MessageFormat.format(
+							"Cannot instantiate class >{0}<.", new Object[] {
+								className }));
 					}
 				}
 			}
