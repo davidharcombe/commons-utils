@@ -1,5 +1,5 @@
 package com.gramercysoftware.utils.pcltest;
 
-public class RedClass {
+public class RedClass implements ColourClass {
 
 }
