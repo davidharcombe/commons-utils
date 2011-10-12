@@ -4,7 +4,7 @@ import junit.framework.TestCase;
 
 import org.junit.Test;
 
-public class TestHumaniseCamelCase extends TestCase {
+public class HumaniseCamelCaseTest extends TestCase {
 	private HumaniseCamelCase humaniseCamelCase;
 	private String[][] testStrings;
 	private String[][] _TestStrings;
