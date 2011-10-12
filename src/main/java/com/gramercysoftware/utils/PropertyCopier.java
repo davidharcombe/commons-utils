@@ -20,7 +20,7 @@ import org.apache.log4j.Logger;
  * 
  * 'Dot-format' properties are also permitted.
  * 
- * @author dharcombe
+ * @author David Harcombe <david.harcombe@gmail.com>
  */
 public class PropertyCopier {
 	Logger logger = Logger.getLogger(PropertyCopier.class);
@@ -224,7 +224,7 @@ public class PropertyCopier {
 		}
 	}
 
-	public String updateCurrentPropertyPath(String currentPropertyPath, String destinationPropertyPath) {
+	private String updateCurrentPropertyPath(String currentPropertyPath, String destinationPropertyPath) {
 		StringBuffer result = new StringBuffer();
 		int curPosLoc = -1;
 		int nextDot = -1;

@@ -7,7 +7,7 @@ import org.apache.commons.beanutils.Converter;
  * custom converters for.
  * 
  * @see com.enstream.utils.classutils.PropertyCopier
- * @author dharcombe
+ * @author David Harcombe <david.harcombe@gmail.com>
  */
 public interface ICustomConverter {
 	Converter getConverter();

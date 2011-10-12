@@ -9,25 +9,6 @@ import org.junit.Test;
 public class EnumUtilsTest {
 	private EnumUtils fixture;
 	
-	enum Foo {
-		FOO, BAR, BAZ;
-	}
-	
-	enum Bar {
-		FOO("Foo"), BAR("Bar"), BAZ("Baz");
-		
-		private final String value;
-
-		private Bar(String value) {
-			this.value = value;
-		}
-		
-		@Override
-		public String toString() {
-			return value;
-		}
-	}
-
 	@Before
 	public void setUp() throws Exception {
 		fixture = new EnumUtils();
