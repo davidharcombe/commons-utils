@@ -8,9 +8,9 @@
     <name>commons-utils</name>
     <url>http://maven.apache.org</url>
     <scm>
-        <connection>scm:svn:svn+ssh://david@wiredandwonderful.com/opt/svn/projects/commons-utils/trunk/</connection>
-        <developerConnection>scm:svn:svn+ssh://david@wiredandwonderful.com/opt/svn/projects/commons-utils/trunk/</developerConnection>
-        <url>svn+ssh://david@wiredandwonderful.com/opt/svn/projects/commons-utils/trunk/</url>
+        <connection>scm:git:git@github.com:davidharcombe/commons-utils.git</connection>
+        <developerConnection>scm:git:git@github.com:davidharcombe/commons-utils.git</developerConnection>
+        <url>https://davidharcombe@github.com/davidharcombe/commons-utils.git</url>
     </scm>
 
     <dependencies>
@@ -56,6 +56,8 @@
         </dependency>
     </dependencies>
 
+<!--
+  ** commented out until I get a new repo up 
     <distributionManagement>
         <repository>
             <uniqueVersion>false</uniqueVersion>
@@ -70,6 +72,7 @@
             <url>http://mvnrepo.wiredandwonderful.com:8081/artifactory/snapshots</url>
         </snapshotRepository>
     </distributionManagement>
+ -->
 
     <repositories>
     </repositories>

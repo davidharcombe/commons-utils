@@ -1,5 +1,5 @@
 package com.gramercysoftware.utils;
 
-enum Foo {
+enum EUTFoo {
 	FOO, BAR, BAZ;
 }

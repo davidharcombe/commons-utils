@@ -10,13 +10,33 @@ public class RomanNumeralEncoder implements INumberEncoder {
 	private boolean strictRoman;
 
     private class Encoded {
-    	long number;
+    	private long number;
+
+		public long getNumber() {
+			return number;
+		}
+
+		public void setNumber(long number) {
+			this.number = number;
+		}
     }
     
     private static class RomanValue {
-        int    	intVal;
-        String 	romVal;
-        boolean strictRoman;
+        private int    	intVal;
+        private String 	romVal;
+        private boolean strictRoman;
+        
+        public int getIntVal() {
+			return intVal;
+		}
+
+		public String getRomVal() {
+			return romVal;
+		}
+
+		public boolean isStrictRoman() {
+			return strictRoman;
+		}
 
         RomanValue(int dec, String rom, boolean strictRoman) {
             this.intVal = dec;
@@ -25,7 +45,7 @@ public class RomanNumeralEncoder implements INumberEncoder {
         }
     }
 
-    final static List<RomanValue> ROMAN_VALUE_TABLE = 
+    static final List<RomanValue> ROMAN_VALUE_TABLE = 
     	Arrays.asList( new RomanValue[] {        
     			new RomanValue(1000, "M", true),
 		        new RomanValue( 900, "CM", false),
@@ -57,7 +77,7 @@ public class RomanNumeralEncoder implements INumberEncoder {
         
         final StringBuffer result = new StringBuffer();
         final Encoded n = new Encoded();
-        n.number = number;
+        n.setNumber(number);
         
         CollectionUtils.forAllDo(ROMAN_VALUE_TABLE, new Closure() {
 			public void execute(Object element) {
@@ -66,15 +86,15 @@ public class RomanNumeralEncoder implements INumberEncoder {
 					return;
 				}
 				
-	            while (n.number >= roman.intVal) {
-	                n.number -= roman.intVal;   
-	                result.append(roman.romVal);
+	            while (n.getNumber() >= roman.getIntVal()) {
+	                n.setNumber(n.getNumber() - roman.getIntVal());   
+	                result.append(roman.getRomVal());
 	            }
 			}
 			
 			private boolean isStrictRoman(RomanValue roman) {
-				boolean foo = RomanNumeralEncoder.this.strictRoman && roman.strictRoman;
-				boolean bar = !RomanNumeralEncoder.this.strictRoman || roman.strictRoman;
+				boolean foo = RomanNumeralEncoder.this.isStrictRoman() && roman.isStrictRoman();
+				boolean bar = !RomanNumeralEncoder.this.isStrictRoman() || roman.isStrictRoman();
 				return !(foo || bar);
 			}
 		});

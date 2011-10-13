@@ -18,21 +18,21 @@ public class EnumConverterTest {
 	
 	@Test
 	public void testConvert_Good() {
-		Object convert = fixture.convert(Foo.class, "FOO");
+		Object convert = fixture.convert(EUTFoo.class, "FOO");
 		assertNotNull(convert);
-		assertEquals(Foo.class, convert.getClass());
-		assertEquals(Foo.FOO, convert);
+		assertEquals(EUTFoo.class, convert.getClass());
+		assertEquals(EUTFoo.FOO, convert);
 	}
 
 	@Test
 	public void testConvert_BadCase() {
-		Object convert = fixture.convert(Foo.class, "foo");
+		Object convert = fixture.convert(EUTFoo.class, "foo");
 		assertNull(convert);
 	}
 	
 	@Test
 	public void testConvert_BadValue() {
-		Object convert = fixture.convert(Foo.class, "WAHOONIE");
+		Object convert = fixture.convert(EUTFoo.class, "WAHOONIE");
 		assertNull(convert);
 	}
 	
@@ -44,7 +44,7 @@ public class EnumConverterTest {
 	
 	@Test
 	public void testConvert_Null() {
-		Object convert = fixture.convert(Foo.class, null);
+		Object convert = fixture.convert(EUTFoo.class, null);
 		assertNull(convert);
 	}
 }

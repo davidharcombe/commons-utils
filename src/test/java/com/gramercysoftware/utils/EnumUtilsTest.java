@@ -17,14 +17,14 @@ public class EnumUtilsTest {
 	@SuppressWarnings("static-access")
 	@Test
 	public void fromValue() {
-		assertTrue(Foo.FOO == fixture.fromValue(Foo.class, "FOO"));
-		assertFalse(Foo.FOO == fixture.fromValue(Foo.class, "foo"));
+		assertTrue(EUTFoo.FOO == fixture.fromValue(EUTFoo.class, "FOO"));
+		assertFalse(EUTFoo.FOO == fixture.fromValue(EUTFoo.class, "foo"));
 	}
 
 	@SuppressWarnings("static-access")
 	@Test
 	public void fromValueIgnoreCase() {
-		assertTrue(Foo.FOO == fixture.fromValueIgnoreCase(Foo.class, "FOO"));
-		assertTrue(Foo.FOO == fixture.fromValueIgnoreCase(Foo.class, "foo"));
+		assertTrue(EUTFoo.FOO == fixture.fromValueIgnoreCase(EUTFoo.class, "FOO"));
+		assertTrue(EUTFoo.FOO == fixture.fromValueIgnoreCase(EUTFoo.class, "foo"));
 	}
 }

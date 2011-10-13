@@ -27,9 +27,10 @@ public abstract class BaseNumberEncoder implements INumberEncoder {
 	 * 
 	 * @see com.gramercysoftware.utils.numberencoder.INumberEncoder#encode(long)
 	 */
-	public String encode(long number) throws NumberEncodingException {
-		validateInputNumber(number);
+	public String encode(long source) throws NumberEncodingException {
+		validateInputNumber(source);
 
+		long number = source; 
 		StringBuffer encoded = new StringBuffer();
 		do {
 			encoded.insert(0, getCharacterSet().charAt((int) (number % getCharacterSet().length())));
@@ -70,8 +71,7 @@ public abstract class BaseNumberEncoder implements INumberEncoder {
 
 	private long toLong(char unit, int power) {
 		int charPos = StringUtils.indexOf(getCharacterSet(), unit);
-		long decoded = (long) (charPos * Math.pow(getCharacterSet().length(), power));
-		return decoded;
+		return (long) (charPos * Math.pow(getCharacterSet().length(), power));
 	}
 
 	/**
@@ -79,7 +79,7 @@ public abstract class BaseNumberEncoder implements INumberEncoder {
 	 * 
 	 * @return
 	 */
-	public String getCharacterSet() {
+	public final String getCharacterSet() {
 		return characterSet;
 	}
 
@@ -89,7 +89,7 @@ public abstract class BaseNumberEncoder implements INumberEncoder {
 	 * 
 	 * @return
 	 */
-	public int getMaxEncodedLength() {
+	public final int getMaxEncodedLength() {
 		return maxEncodedLength;
 	}
 
@@ -99,7 +99,7 @@ public abstract class BaseNumberEncoder implements INumberEncoder {
 	 * 
 	 * @param characterSet
 	 */
-	protected void setCharacterSet(String characterSet) {
+	protected final void setCharacterSet(String characterSet) {
 		this.characterSet = characterSet;
 	}
 
@@ -109,7 +109,7 @@ public abstract class BaseNumberEncoder implements INumberEncoder {
 	 * 
 	 * @param maxEncodedLength
 	 */
-	protected void setMaxEncodedLength(int maxEncodedLength) {
+	protected final void setMaxEncodedLength(int maxEncodedLength) {
 		this.maxEncodedLength = maxEncodedLength;
 	}
 }
