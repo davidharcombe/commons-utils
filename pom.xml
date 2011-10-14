@@ -56,8 +56,6 @@
         </dependency>
     </dependencies>
 
-<!--
-  ** commented out until I get a new repo up 
     <distributionManagement>
         <repository>
             <uniqueVersion>false</uniqueVersion>
@@ -72,7 +70,6 @@
             <url>http://mvnrepo.wiredandwonderful.com:8081/artifactory/snapshots</url>
         </snapshotRepository>
     </distributionManagement>
- -->
 
     <repositories>
     </repositories>
