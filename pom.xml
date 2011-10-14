@@ -61,13 +61,13 @@
             <uniqueVersion>false</uniqueVersion>
             <id>releases</id>
             <name>wiredandwonderful.com-releases</name>
-            <url>http://mvnrepo.wiredandwonderful.com:8081/artifactory/releases</url>
+            <url>http://mvnrepo.wiredandwonderful.com:8081/nexus/content/repositories/releases/</url>
         </repository>
         <snapshotRepository>
             <uniqueVersion>false</uniqueVersion>
             <id>snapshots</id>
             <name>wiredandwonderful.com-snapshots</name>
-            <url>http://mvnrepo.wiredandwonderful.com:8081/artifactory/snapshots</url>
+            <url>http://mvnrepo.wiredandwonderful.com:8081/nexus/content/repositories/snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 
