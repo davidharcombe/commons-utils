@@ -12,6 +12,9 @@ import java.text.MessageFormat;
  * @author David Harcombe <david.harcombe@gmail.com>
  */
 public class GenericsUtils {
+	private GenericsUtils() {
+	}
+	
 	/**
 	 * <p>Returns the Class of the generic defined. 
 	 * For example, if you have classes thus:</p>
