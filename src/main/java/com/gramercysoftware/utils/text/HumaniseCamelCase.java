@@ -49,7 +49,7 @@ public class HumaniseCamelCase {
 	 */
 	public String humanise(String camelCaseString) {
 		reset();
-		if (camelCaseString.indexOf(" ") == -1) {
+		if (camelCaseString.indexOf(' ') == -1) {
 			Matcher wordMatcher = camelCaseWordMatcher(camelCaseString);
 			while (wordMatcher.find()) {
 				String word = wordMatcher.group();
