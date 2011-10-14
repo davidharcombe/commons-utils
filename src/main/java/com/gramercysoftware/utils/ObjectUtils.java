@@ -42,7 +42,7 @@ public class ObjectUtils<T> {
 	 * @throws IllegalArgumentException
 	 * @throws IllegalAccessException
 	 */
-	public boolean isEmpty(T objectToCheck) throws IllegalArgumentException, IllegalAccessException {
+	public boolean isEmpty(T objectToCheck) throws IllegalAccessException {
 		if (objectToCheck != null) {
 			this.nonEmptyFields = new ArrayList<String>();
 			if(this.fieldsToCheck.isEmpty()) {
@@ -55,7 +55,7 @@ public class ObjectUtils<T> {
 		}
 	}
 
-	private boolean checkNamedFields(T objectToCheck) throws IllegalArgumentException, IllegalAccessException {
+	private boolean checkNamedFields(T objectToCheck) throws IllegalAccessException {
 		boolean isEmpty = true;
 		for (String fieldName : this.fieldsToCheck) {
 			
@@ -68,15 +68,13 @@ public class ObjectUtils<T> {
 					isEmpty &= isFieldEmpty(objectToCheck, field);
 				}
 			} catch (Exception e) {
-				// Ignore
-				System.out.println(e);
 			}
 		}
 		
 		return isEmpty;
 	}
 
-	private boolean checkAllFields(T objectToCheck) throws IllegalArgumentException, IllegalAccessException {
+	private boolean checkAllFields(T objectToCheck) throws IllegalAccessException {
 		boolean isEmpty = true;
 		for (Field field : objectToCheck.getClass().getDeclaredFields()) {
 			checkAccessibility(field);
@@ -96,28 +94,20 @@ public class ObjectUtils<T> {
 	}
 
 	@SuppressWarnings("rawtypes")
-	private boolean isFieldEmpty(T objectToCheck, Field field) throws IllegalArgumentException, IllegalAccessException {
+	private boolean isFieldEmpty(T objectToCheck, Field field) throws IllegalAccessException {
 		Object value = field.get(objectToCheck);
 
 		if (isNull(value)) {
 			return true;
 		} else {
-			if (field.getType().isAssignableFrom(String.class)) {
-				if (StringUtils.isEmpty((String) value)) {
-					return true;
-				}
-			} else if(field.getType().isAssignableFrom(Collection.class)) {
-				if(CollectionUtils.isEmpty((Collection)value)) {
-					return true;
-				}
-			} else if(field.getType().isAssignableFrom(Map.class)) {
-				if(MapUtils.isEmpty((Map)value)) {
-					return true;
-				}
-			} else if(field.getType().isAssignableFrom(List.class)) {
-				if(((List)value).isEmpty()) {
-					return true;
-				}
+			if (field.getType().isAssignableFrom(String.class) && StringUtils.isEmpty((String) value)) {
+				return true;
+			} else if(field.getType().isAssignableFrom(Collection.class) && CollectionUtils.isEmpty((Collection)value)) {
+				return true;
+			} else if(field.getType().isAssignableFrom(Map.class) && MapUtils.isEmpty((Map)value)) {
+				return true;
+			} else if(field.getType().isAssignableFrom(List.class) && ((List)value).isEmpty()) {
+				return true;
 			}
 
 			this.nonEmptyFields.add(field.getName());
@@ -150,7 +140,7 @@ public class ObjectUtils<T> {
 	/**
 	 * Resets the class, removing the list of fields to be checked.
 	 */
-	public void reset() {
+	public final void reset() {
 		this.fieldsToCheck = new HashSet<String>();
 		this.primitives = createPrimitivesList();
 	}

@@ -11,7 +11,7 @@ import java.text.MessageFormat;
  * 
  * @author David Harcombe <david.harcombe@gmail.com>
  */
-public class GenericsUtils {
+public final class GenericsUtils {
 	private GenericsUtils() {
 	}
 	
