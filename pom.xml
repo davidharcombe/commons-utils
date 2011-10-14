@@ -10,7 +10,7 @@
     <scm>
         <connection>scm:git:git@github.com:davidharcombe/commons-utils.git</connection>
         <developerConnection>scm:git:git@github.com:davidharcombe/commons-utils.git</developerConnection>
-        <url>https://davidharcombe@github.com/davidharcombe/commons-utils.git</url>
+        <url>http://davidharcombe@github.com/davidharcombe/commons-utils.git</url>
     </scm>
 
     <dependencies>
@@ -109,7 +109,7 @@
                 <artifactId>maven-release-plugin</artifactId>
                 <version>2.0-beta-9</version>
                 <configuration>
-                    <tagBase>svn+ssh://david@wiredandwonderful.com/opt/svn/projects/commons-utils/tags/</tagBase>
+                    <tagBase>scm:git:git@github.com:davidharcombe/commons-utils.git</tagBase>
                     <remoteTagging>true</remoteTagging>
                 </configuration>
             </plugin>
