@@ -50,7 +50,7 @@ public final class GenericsUtils {
 	 * @return
 	 * @throws GenericsUtilsException
 	 */
-	public static <T> T createT(Class<?> genericSubclass) throws GenericsUtilsException {
+	public static <T extends Object> T createT(Class<?> genericSubclass) throws GenericsUtilsException {
 		try {
 			return createT(genericSubclass.newInstance());
 		} catch (InstantiationException e) {

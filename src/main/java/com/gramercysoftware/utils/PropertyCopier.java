@@ -23,7 +23,7 @@ import org.apache.log4j.Logger;
  * @author David Harcombe <david.harcombe@gmail.com>
  */
 public class PropertyCopier {
-	Logger logger = Logger.getLogger(PropertyCopier.class);
+	private Logger logger = Logger.getLogger(PropertyCopier.class);
 
 	/**
 	 * Copy all matching named properties in the source into the matching properties in the destination
@@ -230,7 +230,7 @@ public class PropertyCopier {
 		int nextDot = -1;
 		if(currentPropertyPath == null) {
 			curPosLoc = 0;
-			nextDot = destinationPropertyPath.indexOf(".", 0);
+			nextDot = destinationPropertyPath.indexOf('.', 0);
 		} else {
 			curPosLoc = currentPropertyPath.length()+1;
 			nextDot = destinationPropertyPath.indexOf(".", curPosLoc+1);
@@ -250,9 +250,11 @@ public class PropertyCopier {
 	 * Register a custom converter in the ConvertUtils
 	 *
 	 * @param toType
+	 * @throws IllegalAccessException 
+	 * @throws InstantiationException 
 	 * @throws Exception
 	 */
-	protected void registerCustomConverter(Class<?> toType) throws Exception {
+	protected void registerCustomConverter(Class<?> toType) throws InstantiationException, IllegalAccessException {
 		ICustomConverter convertible = (ICustomConverter) toType.newInstance();
 		ConvertUtils.register(convertible.getConverter(), toType);
 	}
